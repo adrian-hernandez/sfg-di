@@ -23,9 +23,8 @@ public class SfgDiApplication {
 		// Important : notice that we never created the controller object i.e never did New MyController()
 		// Spring is doing that for us
 		// Under the cover Spring is creating that inside the Spring Context
-		String greeting = myController.sayHello();
-
-		System.out.println(greeting);
+		System.out.println("--------- Primary Bean");
+		System.out.println(myController.sayHello());
 
 		System.out.println("--------- Property");
 		PropertyInjectedController propertyInjectedController = (PropertyInjectedController) ctx.getBean("propertyInjectedController");
